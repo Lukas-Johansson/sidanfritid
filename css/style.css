@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
+
+
 :root {
     --space-3xs: clamp(0.31rem, calc(0.31rem + 0.00vw), 0.31rem);
     --space-2xs: clamp(0.56rem, calc(0.54rem + 0.11vw), 0.63rem);
@@ -20,7 +23,7 @@
     --space-2xl-3xl: clamp(4.50rem, calc(3.46rem + 5.22vw), 7.50rem);
 
     /* Custom pairs */
-    --space-s-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.50rem);
+    --space-s-l: clamp(8.13rem, calc(0.65rem + 2.39vw), 2.50rem);
 
     --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
     --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
@@ -30,7 +33,7 @@
     --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
     --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
     --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
-    --base-font: 'BenchNine', sans-serif;
+    --base-font: 'AR One Sans', sans-serif;
     --color-fg: #000000;
     --color-bg: #dfdfdf;
     --color-primary: rgb(255, 255, 255);
@@ -52,7 +55,6 @@ html {
 
 .section {
     padding-top: var(--space-xl);
-    padding-bottom: var(--space-l);
 }
 
 body {
@@ -64,9 +66,18 @@ body {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     align-items: center;
-    background-image: url(imgs/background.jpg);
+
+    background:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ),
+    /* bottom, image */
+    url(../background.jpg);
+
+
 }
 
 h1 {
@@ -81,7 +92,7 @@ p {
 }
 
 a {
-    font-size: var(--step-1);
+    font-size: var(--step-0);
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
@@ -135,6 +146,7 @@ a:active::before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffffff;
   }
   
 
@@ -154,6 +166,7 @@ a:active::before {
 .logo {
     width: 40%;
     object-fit: contain;
+    margin-left: 4rem;
 }
 
 .top {
@@ -161,14 +174,13 @@ a:active::before {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 54rem;
 }
 
 .bottom {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
+    background-color: #ffffff;
     height: 50px;
     width: 100%;
   }
@@ -194,7 +206,7 @@ a:active::before {
 }
 
 .search {
-    width: 100%;
+    width: 60%;
     position: relative;
     display: flex;
     background-color: #f2f2f2;
@@ -232,8 +244,7 @@ a:active::before {
 
 /*Resize the wrap to see the search bar change!*/
 .wrap {
-    width: 20%;
-    margin-right: 4rem;
+    width: 100%;
     display: flex;
     justify-content: center; /* add this line to center the search bar */
   }
@@ -241,14 +252,13 @@ a:active::before {
 .storestuff {
     text-align: center;
     display: flex;
-    
+    margin-inline: 6rem;
 }
 
 .storePart {
     width: 50%;
     margin: 1rem;
 }
-
 
 .storePartText {
     line-height: 0em;
@@ -271,4 +281,87 @@ a:active::before {
 .cartPartText {
     line-height: 0em;
 }
+
+.ad {
+    background-color: #004B2A;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0;
+}
+
+.firstcontentimg {
+    max-width: 100%;
+    object-fit: cover;
+    margin: var(--space-m);
+    border-radius: 0.5rem;
+}
+
+.firstcontenttext {
+    width: 500px;
+}
+
+.firstcontent {
+    background-color: #ffffff;
+    margin-top: var(--space-xl)
+}
+
+
+.heroText {
+    margin-top: 5rem;
+    margin-bottom: 15rem;
+    width: auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.buttons {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem 7rem;
+    border: 1px solid #929292;
+    border-radius: 0.25rem;
+    transition: 0.5s;
+    margin: 1rem;
+    
+}
+
+.buttons:hover {
+    background-color: #929292;
+    color: #ffffff;
+}
+
+.sectionbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    background: white;
+  }
+  
+  .large-square {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+  
+  
+  .right-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2;
+  }
+  
+
+  
 
