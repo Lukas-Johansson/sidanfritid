@@ -76,6 +76,7 @@ body {
     ),
     /* bottom, image */
     url(../background.jpg);
+    background-color: #ffffff;
 
 
 }
@@ -339,29 +340,87 @@ a:active::before {
     margin-top: 3rem;
 }
 
-.grid-container {
+.offers {
+    background-color: #ffffff;
+    padding: 1rem;
+    height: 30rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1rem;
-    background: white;
+    gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "big big big medium medium"
+      "big big big small small"
   }
   
-  .large-square {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+  @media (width < 1200px) {
+    .offers {
+      height: 50rem;
+      grid-template-areas: 
+      "big big"
+      "big big"
+      "medium medium"
+      "small small"
+    }
   }
   
+  .offers > article {
+    padding: 1.4rem;
+    border: solid 0px transparent;
+    border-radius: 4px;
+  }
   
-  .right-column {
+  .big {
+    grid-area: big;
+    background-image: url(../imgs/firstcontentlarg.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .medium {
+    grid-area: medium;
+    background-image: url(../imgs/northface.png);
+    background-position: center;
+    background-color: #f0f4f2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #f0f4f2;
+  }
+
+  .small {
+    background-color: #004B2A;
+    color: white;
+    padding: 2rem;
+  }
+
+  .bestsellerscontainer {
+    background-color: #ffffff;
+  }
+  
+  .bestsellers {
+    background-color: #ffffff;
+    padding-inline: 20rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1rem;
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 2;
+    gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "small small small small small"
+    }
+
+    .bestsellertext {
+        text-align: center;
+        padding: 1rem;
+    }
+
+  .bestserllerpicture {
+    align-items: center;
   }
-  
 
-  
+.imagebreak {
 
+    
+}
+
+
+ 
