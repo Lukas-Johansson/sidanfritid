@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap');
 
 :root {
     --space-3xs: clamp(0.31rem, calc(0.31rem + 0.00vw), 0.31rem);
@@ -33,7 +32,7 @@
     --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
     --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
     --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
-    --base-font: 'AR One Sans', sans-serif;
+--base-font: 'Hind Madurai', sans-serif;    
     --color-fg: #000000;
     --color-bg: #dfdfdf;
     --color-primary: rgb(255, 255, 255);
@@ -317,19 +316,20 @@ a:active::before {
 }
 
 .buttons {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
     padding: 1rem 7rem;
-    border: 1px solid #929292;
+    border: 1px solid #004B2A;
     border-radius: 0.25rem;
     transition: 0.5s;
     margin: 1rem;
+    background-color: #004B2A;
     
 }
 
 .buttons:hover {
-    background-color: #929292;
+    background-color: #016338;
     color: #ffffff;
 }
 
@@ -375,8 +375,11 @@ a:active::before {
     background-image: url(../imgs/firstcontentlarg.jpg);
     background-size: cover;
     background-position: center;
+    align-items: end;
+    display: flex;
   }
-  
+
+
   .medium {
     grid-area: medium;
     background-image: url(../imgs/northface.png);
@@ -391,6 +394,34 @@ a:active::before {
     background-color: #004B2A;
     color: white;
     padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-header {
+    text-align: center;
+    background-color: white;
+  }
+  
+  .section-header h2 {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 20px;
+    background-color: #fff;
+  }
+  
+  .section-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #000;
   }
 
   .bestsellerscontainer {
@@ -417,10 +448,168 @@ a:active::before {
     align-items: center;
   }
 
-.imagebreak {
-
-    
+/* Product card styles */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+    max-width: 300px;
 }
 
+.product-card:hover {
+    transform: translateY(-5px);
+}
 
- 
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff5733;
+    margin: 5px 0;
+}
+
+.add-to-cart {
+    background-color: #192a56;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background-color: #0c1532;
+}
+
+.image-container {
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+    border: 0px solid transparent;
+    border-radius: 4px;
+  }
+
+  .brands-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+  
+  .brands-scroll {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
+    padding: 50px 0;
+  }
+  
+  .brands-scroll img {
+    height: 70px;
+    margin-right: 20px;
+  }
+
+  .brandimg {
+    margin: 10px;
+  }
+
+  footer {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    height: 50px;
+  }
+  
+  .footer-links a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  .footer-social a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 24px;
+  }
+  
+  .footer-social a:hover {
+    color: #007bff;
+  }
+  
+  .footer-info {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-right: 50px;
+  }
+  
+  .footer-section:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+  
