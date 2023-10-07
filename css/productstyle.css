@@ -32,7 +32,7 @@
     --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
     --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
     --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
---base-font: 'Roboto', sans-serif;   
+    --base-font: 'Roboto', sans-serif;   
     --color-fg: #000000;
     --color-bg: #dfdfdf;
     --color-primary: rgb(255, 255, 255);
@@ -411,6 +411,7 @@ body {
     text-decoration: none;
     padding: 12px 30px;
     transition: all .5s;
+    border: 1px solid #004B2A;
   }
 
   .cart-btn a {
