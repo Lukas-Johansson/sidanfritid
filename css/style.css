@@ -242,7 +242,6 @@ a:active::before {
     font-size: 20px;
 }
 
-/*Resize the wrap to see the search bar change!*/
 .wrap {
     width: 100%;
     display: flex;
@@ -470,10 +469,11 @@ a:active::before {
   }
   
   .bestsellers {
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
     background-color: #ffffff;
-    padding-inline: 20rem;
     display: grid;
-    gap: 20px;
+    justify-content: space-evenly;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -536,7 +536,7 @@ a:active::before {
 }
 
 .add-to-cart {
-    background-color: #192a56;
+    background-color: #004B2A;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -547,7 +547,7 @@ a:active::before {
 }
 
 .add-to-cart:hover {
-    background-color: #0c1532;
+    background-color: #016338;
 }
 
 .product-card a:hover{
@@ -617,7 +617,7 @@ a:active::before {
   }
   
   .footer-links a:hover {
-    color: #007bff;
+    color: #004B2A;
   }
   
   .footer-social a {

@@ -56,7 +56,6 @@ html {
     padding-top: var(--space-3xl);
 }
 
-
 h1 {
     font-size: var(--step-5);
     font-weight: 700;
@@ -423,3 +422,4 @@ body {
     background-color: #64af3d;
   }
 
+  
